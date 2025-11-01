@@ -1,10 +1,18 @@
 
 <html lang="en">
 <head>
-    <!-- Zwischen <head> und </head> einfügen -->
+    
 <!-- Apple Touch Icon (iOS) -->
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
+<!-- App Icons -->
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
+    
+<!-- iOS Web App Einstellungen -->
+<meta name="apple-mobile-web-app-title" content="Notizbuch">
+    
 <!-- Favicon (Browser-Tab) -->
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
