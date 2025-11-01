@@ -2,6 +2,24 @@
 
 <html lang="en">
 <head>
+    <!-- Zwischen <head> und </head> einfügen -->
+<!-- Apple Touch Icon (iOS) -->
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<!-- Favicon (Browser-Tab) -->
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
+
+<!-- App Name im Home Screen -->
+<meta name="apple-mobile-web-app-title" content="Notizbuch">
+
+<!-- Vollbild-Modus (versteckt Safari-Leiste) -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<!-- Android Chrome -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#e8d4f0">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
