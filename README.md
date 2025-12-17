@@ -44,7 +44,7 @@
 ```
     body {
         font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', sans-serif;
-        background: linear-gradient(135deg, #f5f7fa 0%, #e8eef5 100%);
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
         min-height: 100vh;
         color: #2c3e50;
     }
@@ -53,30 +53,35 @@
 
     /* Header */
     .header {
-        background: linear-gradient(135deg, #e8d4f0 0%, #d4b8e6 100%);
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
         padding: 30px 20px;
-        box-shadow: 0 4px 20px rgba(212, 184, 230, 0.3);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     }
 
     .title {
         font-size: 32px;
         font-weight: 300;
         margin-bottom: 8px;
-        color: #5a4a6f;
+        color: rgba(255, 255, 255, 0.95);
         letter-spacing: -0.5px;
     }
 
     .subtitle {
         font-size: 14px;
-        color: rgba(90, 74, 111, 0.7);
+        color: rgba(255, 255, 255, 0.7);
         font-weight: 300;
         margin-bottom: 20px;
     }
 
     .btn {
-        background: white;
-        color: #9b7ab8;
-        border: none;
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        color: white;
+        border: 1px solid rgba(255, 255, 255, 0.3);
         border-radius: 12px;
         padding: 14px 24px;
         font-size: 15px;
@@ -101,10 +106,13 @@
     }
 
     .card {
-        background: white;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.25);
         border-radius: 16px;
         overflow: hidden;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
         transition: all 0.3s ease;
     }
 
@@ -123,12 +131,13 @@
     }
 
     .card-title {
-        color: #5a4a6f;
+        color: rgba(90, 74, 111, 0.95);
         font-size: 17px;
         font-weight: 400;
         text-align: center;
         word-break: break-word;
         line-height: 1.5;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
     .delete-x {
@@ -150,57 +159,62 @@
 
     .card-info {
         padding: 16px;
-        background: white;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
     }
 
     .card-info-title {
         font-size: 13px;
-        color: #2c3e50;
+        color: rgba(255, 255, 255, 0.9);
         margin-bottom: 6px;
         font-weight: 500;
     }
 
     .card-info-meta {
         font-size: 11px;
-        color: #95a5a6;
+        color: rgba(255, 255, 255, 0.6);
         font-weight: 400;
     }
 
     /* Navigation */
     .nav {
-        background: white;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
         padding: 20px;
-        border-bottom: 1px solid #f0e6f5;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         display: flex;
         align-items: center;
         gap: 15px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     }
 
     .back {
-        background: linear-gradient(135deg, #f5f7fa 0%, #e8eef5 100%);
-        border: none;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.25);
         width: 40px;
         height: 40px;
         border-radius: 20px;
         font-size: 20px;
         cursor: pointer;
-        color: #9b7ab8;
+        color: white;
         font-weight: 300;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 
     .nav-title {
         font-size: 22px;
         font-weight: 400;
-        color: #2c3e50;
+        color: rgba(255, 255, 255, 0.95);
         letter-spacing: -0.3px;
     }
 
     /* Content */
     .content {
         padding: 25px 20px;
-        background: linear-gradient(135deg, #f5f7fa 0%, #e8eef5 100%);
     }
 
     .preview {
@@ -216,12 +230,13 @@
     }
 
     .preview-text {
-        color: #5a4a6f;
+        color: rgba(90, 74, 111, 0.95);
         font-size: 28px;
         font-weight: 300;
         text-align: center;
         word-break: break-word;
         line-height: 1.4;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
     .label {
@@ -229,7 +244,7 @@
         font-weight: 500;
         margin-bottom: 10px;
         display: block;
-        color: #2c3e50;
+        color: rgba(255, 255, 255, 0.9);
         text-transform: uppercase;
         letter-spacing: 0.5px;
     }
@@ -237,20 +252,27 @@
     .input {
         width: 100%;
         padding: 14px 16px;
-        border: 1px solid #e8d4f0;
+        border: 1px solid rgba(255, 255, 255, 0.25);
         border-radius: 12px;
         font-size: 15px;
         margin-bottom: 25px;
-        background: white;
-        color: #2c3e50;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        color: white;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         transition: all 0.3s ease;
+    }
+
+    .input::placeholder {
+        color: rgba(255, 255, 255, 0.5);
     }
 
     .input:focus {
         outline: none;
-        border-color: #d4b8e6;
-        box-shadow: 0 4px 12px rgba(212, 184, 230, 0.15);
+        border-color: rgba(255, 255, 255, 0.4);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        background: rgba(255, 255, 255, 0.2);
     }
 
     .colors {
@@ -285,53 +307,57 @@
         gap: 10px;
         overflow-x: auto;
         padding: 0 20px 20px;
-        background: white;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
         -webkit-overflow-scrolling: touch;
     }
 
     .action-btn {
-        background: linear-gradient(135deg, #f5f7fa 0%, #e8eef5 100%);
-        border: 1px solid #e8d4f0;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.25);
         border-radius: 10px;
         padding: 10px 16px;
         font-size: 13px;
         white-space: nowrap;
         cursor: pointer;
-        color: #9b7ab8;
+        color: white;
         font-weight: 500;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         transition: all 0.2s ease;
     }
 
     .action-btn.primary {
-        background: linear-gradient(135deg, #e8d4f0 0%, #d4b8e6 100%);
-        color: #5a4a6f;
-        border: none;
+        background: rgba(255, 255, 255, 0.25);
+        border: 1px solid rgba(255, 255, 255, 0.35);
     }
 
     /* Pages */
     .pages {
         padding: 25px 20px;
-        background: linear-gradient(135deg, #f5f7fa 0%, #e8eef5 100%);
     }
 
     .page {
-        background: white;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
         width: 100%;
         aspect-ratio: 0.707;
         margin-bottom: 25px;
         border-radius: 12px;
-        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
         position: relative;
         overflow: hidden;
-        border: 1px solid #f0e6f5;
+        border: 1px solid rgba(255, 255, 255, 0.25);
     }
 
     .page-num {
         position: absolute;
         top: 16px;
         font-size: 11px;
-        color: #95a5a6;
+        color: rgba(255, 255, 255, 0.7);
         z-index: 10;
         font-weight: 400;
         letter-spacing: 0.5px;
@@ -349,17 +375,20 @@
     }
 
     .cover-title {
-        color: #5a4a6f;
+        color: rgba(90, 74, 111, 0.95);
         font-size: 36px;
         font-weight: 300;
         text-align: center;
         line-height: 1.3;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
     /* TOC */
     .toc {
         padding: 45px 30px;
-        background: white;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
     }
 
     .toc-title {
@@ -367,7 +396,7 @@
         font-weight: 300;
         text-align: center;
         margin-bottom: 35px;
-        color: #2c3e50;
+        color: rgba(255, 255, 255, 0.95);
         letter-spacing: -0.5px;
     }
 
@@ -375,26 +404,26 @@
         display: flex;
         justify-content: space-between;
         padding: 14px 0;
-        border-bottom: 1px solid #f0e6f5;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         cursor: pointer;
         font-size: 14px;
         transition: all 0.2s ease;
     }
 
     .toc-item:active {
-        background: rgba(232, 212, 240, 0.2);
+        background: rgba(255, 255, 255, 0.15);
         padding-left: 8px;
         padding-right: 8px;
         border-radius: 8px;
     }
 
     .toc-item-title {
-        color: #2c3e50;
+        color: rgba(255, 255, 255, 0.9);
         font-weight: 400;
     }
 
     .toc-item-page {
-        color: #9b7ab8;
+        color: rgba(255, 255, 255, 0.95);
         font-weight: 500;
     }
 
@@ -406,7 +435,9 @@
         align-items: center;
         justify-content: center;
         padding: 25px;
-        background: white;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
     }
 
     .pdf-img {
@@ -420,36 +451,39 @@
     .empty {
         text-align: center;
         padding: 70px 30px;
-        color: #95a5a6;
+        color: rgba(255, 255, 255, 0.8);
     }
 
     .empty-icon {
         font-size: 56px;
         margin-bottom: 18px;
-        opacity: 0.5;
+        opacity: 0.6;
     }
 
     .empty-text {
         font-size: 15px;
         line-height: 1.6;
         font-weight: 300;
+        color: rgba(255, 255, 255, 0.8);
     }
 
     /* Sections */
     .section {
-        background: white;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
         border-radius: 16px;
         padding: 25px;
         margin-bottom: 20px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        border: 1px solid #f0e6f5;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.25);
     }
 
     .section-title {
         font-size: 17px;
         font-weight: 500;
         margin-bottom: 18px;
-        color: #2c3e50;
+        color: rgba(255, 255, 255, 0.95);
     }
 
     .row {
@@ -466,36 +500,40 @@
         justify-content: space-between;
         align-items: center;
         padding: 14px 16px;
-        background: linear-gradient(135deg, #f5f7fa 0%, #e8eef5 100%);
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
         border-radius: 12px;
         margin-bottom: 12px;
         font-size: 14px;
-        border: 1px solid #f0e6f5;
+        border: 1px solid rgba(255, 255, 255, 0.2);
     }
 
     .entry-text {
-        color: #2c3e50;
+        color: rgba(255, 255, 255, 0.9);
         font-weight: 400;
     }
 
     .del-btn {
-        background: linear-gradient(135deg, #ff9fb3 0%, #ff8ca3 100%);
+        background: rgba(255, 90, 120, 0.8);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
         color: white;
-        border: none;
+        border: 1px solid rgba(255, 255, 255, 0.3);
         width: 34px;
         height: 34px;
         border-radius: 17px;
         cursor: pointer;
         font-size: 16px;
         font-weight: 300;
-        box-shadow: 0 4px 12px rgba(255, 140, 163, 0.3);
+        box-shadow: 0 4px 12px rgba(255, 90, 120, 0.3);
         transition: all 0.2s ease;
     }
 
     .msg {
         text-align: center;
         padding: 18px;
-        color: #9b7ab8;
+        color: rgba(255, 255, 255, 0.9);
         font-weight: 400;
         font-size: 14px;
     }
