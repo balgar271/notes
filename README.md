@@ -11,14 +11,14 @@
     <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
     
 <!-- iOS Web App Einstellungen -->
-<meta name="apple-mobile-web-app-title" content="Monster-Bücher 👾">
+<meta name="apple-mobile-web-app-title" content="Notizbuch">
     
 <!-- Favicon (Browser-Tab) -->
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
 
 <!-- App Name im Home Screen -->
-<meta name="apple-mobile-web-app-title" content="Monster-Bücher 👾">
+<meta name="apple-mobile-web-app-title" content="Notizbuch">
 
 <!-- Vollbild-Modus (versteckt Safari-Leiste) -->
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -31,8 +31,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Monster-Bücher 👾">
-    <title>👾 Kleine Monster-Bücher</title>
+    <meta name="apple-mobile-web-app-title" content="Notebook">
+    <title>Digital Notebook</title>
     <style>
         * {
             margin: 0;
@@ -64,10 +64,6 @@
         margin-bottom: 8px;
         color: #5a4a6f;
         letter-spacing: -0.5px;
-    }
-
-    .title::before {
-        content: '👾 ';
     }
 
     .subtitle {
@@ -604,17 +600,17 @@
         if (!cards) {
             cards = `
                 <div style="grid-column: 1/-1;" class="empty">
-                    <div class="empty-icon">👾</div>
-                    <p class="empty-text">Noch keine Monster hier!<br>Erschaffe dein erstes Monster-Buch 🦖</p>
+                    <div class="empty-icon">📚</div>
+                    <p class="empty-text">No notebooks yet<br>Create your first one to get started</p>
                 </div>
             `;
         }
 
         return `
             <div class="header">
-                <div class="title">Meine Monster-Bücher</div>
-                <div class="subtitle">Sammle deine kleinen Monster-Notizen 🦕</div>
-                <button class="btn" onclick="createNotebook()">+ Neues Monster-Buch</button>
+                <div class="title">My Notebooks</div>
+                <div class="subtitle">Organize your notes beautifully</div>
+                <button class="btn" onclick="createNotebook()">+ New Notebook</button>
             </div>
             <div class="grid">${cards}</div>
         `;
@@ -633,17 +629,17 @@
         return `
             <div class="nav">
                 <button class="back" onclick="backToLibrary()">←</button>
-                <div class="nav-title">Monster gestalten 👾</div>
+                <div class="nav-title">Customize Cover</div>
             </div>
             <div class="content">
                 <div class="preview" id="preview" style="background: ${bgColor};">
-                    <div class="preview-text" id="previewText">${app.editing.title || 'Kleines Monster'}</div>
+                    <div class="preview-text" id="previewText">${app.editing.title || 'Untitled Notebook'}</div>
                 </div>
-                <label class="label">Monster-Name 🦕</label>
-                <input type="text" class="input" id="titleInput" value="${app.editing.title}" placeholder="Wie heißt dein Monster?">
-                <label class="label">Monster-Farbe 🎨</label>
+                <label class="label">Notebook Title</label>
+                <input type="text" class="input" id="titleInput" value="${app.editing.title}" placeholder="Enter your notebook title">
+                <label class="label">Cover Color</label>
                 <div class="colors">${colorBtns}</div>
-                <button class="btn" onclick="saveCover()">Monster speichern! 🦖</button>
+                <button class="btn" onclick="saveCover()">Save and Continue</button>
             </div>
         `;
     }
@@ -701,8 +697,8 @@
         if (pgs.length === 0 && !hasToc) {
             pages += `
                 <div class="empty">
-                    <div class="empty-icon">🦕</div>
-                    <p class="empty-text">Monster ist noch leer!<br>Füttere dein Monster mit Bildern 🍃</p>
+                    <div class="empty-icon">📄</div>
+                    <p class="empty-text">No pages yet<br>Add images or PDF files to begin</p>
                 </div>
             `;
         }
@@ -713,13 +709,13 @@
                 <div class="nav-title">${nb.title}</div>
             </div>
             <div class="actions">
-                <button class="action-btn" onclick="editNotebookCover()">Monster ändern 🦖</button>
-                <button class="action-btn" onclick="editTOC()">Inhaltsverzeichnis 📑</button>
-                <button class="action-btn primary" onclick="document.getElementById('file').click()">+ Monster füttern 🍃</button>
+                <button class="action-btn" onclick="editNotebookCover()">Edit Cover</button>
+                <button class="action-btn" onclick="editTOC()">Edit Index</button>
+                <button class="action-btn primary" onclick="document.getElementById('file').click()">+ Add Pages</button>
             </div>
             <div class="pages" id="pagesContainer">
                 ${pages}
-                <div id="loading" class="msg hidden">Monster wird gefüttert... 🦕</div>
+                <div id="loading" class="msg hidden">Processing...</div>
             </div>
             <input type="file" id="file" accept="image/*,application/pdf" multiple style="display:none" onchange="handleFiles(event)">
         `;
@@ -739,25 +735,25 @@
         }
 
         if (!list) {
-            list = '<div class="empty"><p class="empty-text">Noch keine Kapitel! 📖</p></div>';
+            list = '<div class="empty"><p class="empty-text">No entries yet</p></div>';
         }
 
         return `
             <div class="nav">
                 <button class="back" onclick="backToNotebook()">←</button>
-                <div class="nav-title">Monster-Inhalte 📑</div>
+                <div class="nav-title">Edit Index</div>
             </div>
             <div class="content">
                 <div class="section">
-                    <div class="section-title">Neues Monster-Kapitel 🦕</div>
+                    <div class="section-title">Add New Entry</div>
                     <div class="row">
-                        <input type="text" class="input" id="tocTitle" placeholder="Kapitel-Name" style="margin:0">
-                        <input type="number" class="input" id="tocPage" placeholder="Seite" style="margin:0">
+                        <input type="text" class="input" id="tocTitle" placeholder="Topic title" style="margin:0">
+                        <input type="number" class="input" id="tocPage" placeholder="Page" style="margin:0">
                     </div>
-                    <button class="btn" onclick="addTOC()">Hinzufügen 👾</button>
+                    <button class="btn" onclick="addTOC()">Add Entry</button>
                 </div>
                 <div class="section">
-                    <div class="section-title">Alle Kapitel 📖</div>
+                    <div class="section-title">Current Entries</div>
                     ${list}
                 </div>
             </div>
@@ -769,7 +765,7 @@
         if (input) {
             input.oninput = function() {
                 app.editing.title = this.value;
-                document.getElementById('previewText').textContent = this.value || 'Kleines Monster';
+                document.getElementById('previewText').textContent = this.value || 'Untitled Notebook';
             };
         }
     }
@@ -777,7 +773,7 @@
     function createNotebook() {
         const nb = {
             id: Date.now(),
-            title: 'Kleines Monster',
+            title: 'Untitled Notebook',
             color: 'pink',
             pages: [],
             toc: []
@@ -797,7 +793,7 @@
     }
 
     function deleteNotebook(id) {
-        if (confirm('Dieses Monster wirklich löschen? 🦖')) {
+        if (confirm('Delete this notebook?')) {
             app.notebooks = app.notebooks.filter(n => n.id !== id);
             saveData();
             render();
@@ -818,7 +814,7 @@
     }
 
     function saveCover() {
-        app.current.title = app.editing.title || 'Kleines Monster';
+        app.current.title = app.editing.title || 'Untitled Notebook';
         app.current.color = app.editing.color;
         app.notebooks = app.notebooks.map(n => n.id === app.current.id ? app.current : n);
         saveData();
@@ -845,9 +841,9 @@
     function addTOC() {
         const title = document.getElementById('tocTitle').value.trim();
         const page = document.getElementById('tocPage').value.trim();
-
+        
         if (!title || !page) {
-            alert('Bitte Namen und Seitenzahl eingeben! 📖');
+            alert('Enter both title and page');
             return;
         }
 
